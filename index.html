@@ -276,6 +276,12 @@
     .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
   </style>
 </head>
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/service-worker.js")
+      .then(() => console.log("Service Worker registrado"));
+  }
+</script>
 <body>
   <div class="container">
     <header>
